@@ -9,36 +9,82 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>My first PHP Page</h1>
+    <h3>Declaring Variables</h3>
     <?php
-    echo "Hello World!";
+    $txt = "Hello World!";
+    $x = 5;
+    $y = 10.5;
+
+    echo $txt;
+    echo "<br>";
+    echo $x;
+    echo "<br>";
+    echo $y;
+    echo "<br>";
+    ?>
+
+    <h3>Output Variables</h3>
+    <?php
+    $txt = "W3Schools.com";
+    echo "I love $txt!";
     ?>
     <br>
-    <h3>Comments in PHP</h3>
     <?php
-    // This is a single-line comment
-    # This is also a single-line comment
-
-    /*
-    This is a multiple-lines comment block
-    that spans over multiple
-    lines
-    */
-
-    // You can also use comments to leave out parts of a code line
-    $x = 5 /* + 15 */ + 5;
-    echo $x;
+    echo "I think " . $txt . " is neat";
     ?>
-    <h3>PHP Case Sensitivity</h3>
+    <br>
     <?php
-    ECHO "Hello World!<br>";
-    echo "Hello World!<br>";
-    EcHo "Hello World!<br>";
+    $x = 5;
+    $y = 4;
+    echo $x + $y;
+    ?>
+    <h3>Global and Local Scope</h3>
+    <?php
+    $x = 5; // Global scope
 
-    $color = "red";
-    echo "My car is " . $color . "<br>";
-    echo "My house is " . $COLOR . "<br>";
-    echo "My boat is " . $coLOR . "<br>";
+    function myTest() {
+        // Using x inside this function will generate an error
+        echo "<p>Variable x inside function is: $x</p>";
+    }
+    myTest();
+    echo "<p>Variable x outside the function is: $x</p>";
+    ?>
+    <h3>PHP The Global Keyword</h3>
+    <?php
+    $x = 5;
+    $y = 10;
+
+    function myTest2() {
+        global $x, $y;
+        $y = $x + $y;
+    }
+
+    myTest2();
+    echo $y;
+    ?>
+    <br>
+    <?php
+    $x = 6;
+    $y = 11;
+
+    function myTest3() {
+        $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
+    }
+    
+    myTest3();
+    echo $y;
+    ?>
+    <h3>PHP The static Keyword</h3>
+    <?php
+    function myTest4() {
+        static $x = 0;
+        echo $x;
+        $x++;
+    }
+
+    myTest4();
+    myTest4();
+    myTest4();
     ?>
 </body>
 </html>
