@@ -9,82 +9,40 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h3>Declaring Variables</h3>
+    <h3>The PHP echo Statement</h3>
     <?php
-    $txt = "Hello World!";
-    $x = 5;
-    $y = 10.5;
-
-    echo $txt;
-    echo "<br>";
-    echo $x;
-    echo "<br>";
-    echo $y;
-    echo "<br>";
-    ?>
-
-    <h3>Output Variables</h3>
-    <?php
-    $txt = "W3Schools.com";
-    echo "I love $txt!";
+    echo "<h2>PHP is FUN!</h2>";
+    echo "Hello World!<br>";
+    echo "I'm about to learn PHP!<br>";
+    echo "This ", "string ", "was ", "made ", "with multiple parameters";
     ?>
     <br>
     <?php
-    echo "I think " . $txt . " is neat";
-    ?>
-    <br>
-    <?php
+    $txt1 = "Learn PHP";
+    $txt2 = "W3Schools.com";
     $x = 5;
     $y = 4;
+
+    echo "<h2> ". $txt1 . "</h2>";
+    echo "Study PHP at " . $txt2 . "<br>";
     echo $x + $y;
     ?>
-    <h3>Global and Local Scope</h3>
+    <h3>The PHP print Statement</h3>
     <?php
-    $x = 5; // Global scope
-
-    function myTest() {
-        // Using x inside this function will generate an error
-        echo "<p>Variable x inside function is: $x</p>";
-    }
-    myTest();
-    echo "<p>Variable x outside the function is: $x</p>";
-    ?>
-    <h3>PHP The Global Keyword</h3>
-    <?php
-    $x = 5;
-    $y = 10;
-
-    function myTest2() {
-        global $x, $y;
-        $y = $x + $y;
-    }
-
-    myTest2();
-    echo $y;
+    print "<h2>PHP is Fun!</h2>";
+    print "Hello World!<br>";
+    print "I'm about to learn PHP!";
     ?>
     <br>
     <?php
-    $x = 6;
-    $y = 11;
+    $txt1 = "Learn PHP";
+    $txt2 = "W3Schools.com";
+    $x = 5;
+    $y = 4;
 
-    function myTest3() {
-        $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
-    }
-    
-    myTest3();
-    echo $y;
-    ?>
-    <h3>PHP The static Keyword</h3>
-    <?php
-    function myTest4() {
-        static $x = 0;
-        echo $x;
-        $x++;
-    }
-
-    myTest4();
-    myTest4();
-    myTest4();
+    print "<h2>" . $txt1 . "</h2>";
+    print "Study PHP at " . $txt2 . "<br>";
+    print $x + $y;
     ?>
 </body>
 </html>
