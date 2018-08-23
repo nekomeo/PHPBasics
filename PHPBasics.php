@@ -9,49 +9,25 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h3>PHP String</h3>
+    <h3>Get the Length of a String</h3>
     <?php
-    $x = "Hello World!";
-    $y = 'Hello World!';
-
-    echo $x;
-    echo "<br>";
-    echo $y;
+    echo strlen("Hello World!");
     ?>
-    <h3>PHP Integer</h3>
+    <h3>Count the Number of Words in a String</h3>
     <?php
-    $x = 5985;
-    var_dump($x);
+    echo str_word_count("Hello World!");
     ?>
-    <h3>PHP Float</h3>
+    <h3>Reverse a String</h3>
     <?php
-    $x = 10.365;
-    var_dump($x);
+    echo strrev("Hello World!");
     ?>
-    <h3>PHP Array</h3>
+    <h3>Search for Specific Text in a String</h3>
     <?php
-    $cars = array("Volvo", "BMW", "Toyota");
-    var_dump($cars);
+    echo strpos("Hello World!", "World"); // Outputs the count
     ?>
-    <h3>PHP Objects</h3>
+    <h3>Replace Text Within a String</h3>
     <?php
-    class Car {
-        function Car() {
-            $this->model = "VW";
-        }
-    }
-
-    // Create an object
-    $herbie = new Car();
-
-    // Show object properties
-    echo $herbie->model;
-    ?>
-    <h3>PHP NULL Value</h3>
-    <?php
-    $x = "Hello World!";
-    $x = NULL;
-    var_dump($x);
+    echo str_replace("World", "Dolly", "Hello World!");
     ?>
 </body>
 </html>
