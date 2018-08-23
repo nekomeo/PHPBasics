@@ -9,40 +9,49 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h3>The PHP echo Statement</h3>
+    <h3>PHP String</h3>
     <?php
-    echo "<h2>PHP is FUN!</h2>";
-    echo "Hello World!<br>";
-    echo "I'm about to learn PHP!<br>";
-    echo "This ", "string ", "was ", "made ", "with multiple parameters";
-    ?>
-    <br>
-    <?php
-    $txt1 = "Learn PHP";
-    $txt2 = "W3Schools.com";
-    $x = 5;
-    $y = 4;
+    $x = "Hello World!";
+    $y = 'Hello World!';
 
-    echo "<h2> ". $txt1 . "</h2>";
-    echo "Study PHP at " . $txt2 . "<br>";
-    echo $x + $y;
+    echo $x;
+    echo "<br>";
+    echo $y;
     ?>
-    <h3>The PHP print Statement</h3>
+    <h3>PHP Integer</h3>
     <?php
-    print "<h2>PHP is Fun!</h2>";
-    print "Hello World!<br>";
-    print "I'm about to learn PHP!";
+    $x = 5985;
+    var_dump($x);
     ?>
-    <br>
+    <h3>PHP Float</h3>
     <?php
-    $txt1 = "Learn PHP";
-    $txt2 = "W3Schools.com";
-    $x = 5;
-    $y = 4;
+    $x = 10.365;
+    var_dump($x);
+    ?>
+    <h3>PHP Array</h3>
+    <?php
+    $cars = array("Volvo", "BMW", "Toyota");
+    var_dump($cars);
+    ?>
+    <h3>PHP Objects</h3>
+    <?php
+    class Car {
+        function Car() {
+            $this->model = "VW";
+        }
+    }
 
-    print "<h2>" . $txt1 . "</h2>";
-    print "Study PHP at " . $txt2 . "<br>";
-    print $x + $y;
+    // Create an object
+    $herbie = new Car();
+
+    // Show object properties
+    echo $herbie->model;
+    ?>
+    <h3>PHP NULL Value</h3>
+    <?php
+    $x = "Hello World!";
+    $x = NULL;
+    var_dump($x);
     ?>
 </body>
 </html>
