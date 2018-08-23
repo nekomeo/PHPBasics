@@ -9,25 +9,20 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h3>Get the Length of a String</h3>
+    <h3>Create a PHP Constant</h3>
     <?php
-    echo strlen("Hello World!");
+    define("GREETING", "Welcome to W3Schools.com!", true); // true makes case insensitive
+    echo greeting;
     ?>
-    <h3>Count the Number of Words in a String</h3>
+    <h3>Constants are Global</h3>
     <?php
-    echo str_word_count("Hello World!");
-    ?>
-    <h3>Reverse a String</h3>
-    <?php
-    echo strrev("Hello World!");
-    ?>
-    <h3>Search for Specific Text in a String</h3>
-    <?php
-    echo strpos("Hello World!", "World"); // Outputs the count
-    ?>
-    <h3>Replace Text Within a String</h3>
-    <?php
-    echo str_replace("World", "Dolly", "Hello World!");
+    define("GREETING", "Welcome to W3Schools.com!", true);
+
+    function myTest() {
+        echo greeting;
+    }
+
+    myTest();
     ?>
 </body>
 </html>
